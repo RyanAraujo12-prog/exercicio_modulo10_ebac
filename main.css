@@ -1,0 +1,349 @@
+/* RESET E CONFIG GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff4e6; /* coloquei uma cor leve pra dar um charme */
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CABEÇALHO E RODAPÉ */
+header, footer {
+  background-color: #FF6F00;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header > .container,
+footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+/* TIPOGRAFIA */
+h1, h2, .titulo {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #FF6F00;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 12px 0;
+  text-align: center;
+  color: #333;
+}
+
+.container p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-hamburguer {
+  width: 32px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.menu-hamburguer span {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  display: block;
+}
+
+/* NAVEGAÇÃO */
+nav {
+  display: none; /* pra mobile, a gente controla via JS */
+  background-color: #ff892e;
+  padding: 10px 0;
+  user-select: none;
+}
+
+nav.active {
+  display: block;
+}
+
+nav ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff4e6;
+}
+
+/* CARROSSEL */
+#carousel-images {
+  width: 100%;
+  max-width: 1200px;
+  margin: 32px auto 0 auto;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  background: #fff;
+}
+
+#carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+#carousel-images img:hover {
+  transform: scale(1.03);
+}
+
+/* LOGO */
+.logo-manco {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 24px auto;
+}
+
+/* CAMISAS */
+.camisas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.camisas li {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.camisas li:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.camisas li img {
+  max-width: 100%;
+  border-radius: 18px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 2px solid #FF6F00;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* PREÇO */
+strong.preco {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  font-size: 22px;
+  color: #FF6F00;
+  margin: 12px 0;
+  text-align: center;
+}
+
+/* BOTÃO COMPRAR */
+.btn-comprar {
+  background-color: #FF6F00;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: center;
+  width: 100%;
+  max-width: 180px;
+  text-align: center;
+  font-weight: 700;
+  user-select: none;
+}
+
+.btn-comprar:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
+
+/* FLEX */
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+#cadastro {
+  padding: 40px 16px;
+  background-color: #fff4e6;
+  border-radius: 16px;
+  margin-top: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+#cadastro h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 32px;
+  color: #FF6F00;
+  font-family: 'Bebas Neue', cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-campo label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-campo input,
+.form-campo textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-campo input:focus,
+.form-campo textarea:focus {
+  outline: none;
+  border-color: #FF6F00;
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.4);
+}
+
+.form-campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* RODAPÉ */
+footer p {
+  text-align: center;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .container-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav {
+    padding: 10px 0;
+  }
+
+  #carousel-images {
+    height: 250px;
+  }
+
+  .camisas {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .camisas li {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
